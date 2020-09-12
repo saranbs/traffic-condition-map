@@ -1,0 +1,20 @@
+ext.versionConfig = [
+        major: 1,
+        minor: 0,
+        patch: 0
+]
+
+ext.appConfig = [
+        compileSdk   : 29,
+        minSdk       : 22,
+        targetSdk    : 29,
+        versionCode  : 1,
+        versionName  : "${versionConfig.major}.${versionConfig.minor}.${versionConfig.patch}",
+        applicationId: "com.alpha.trafficconditionmap",
+        minifyEnabled: false,
+        javaVersion:JavaVersion.VERSION_1_8
+]
+
+ext.instrumentationConfig = [
+        testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner"
+]

@@ -1,0 +1,46 @@
+ext.versions = [
+        kotlin           : '1.3.61',
+        ktx              : '1.3.1',
+        appcompat        : '1.2.0',
+        constraintlayout : '2.0.1',
+        retrofit         : '2.8.1',
+        okhttp           : '3.14.4',
+        dagger           : '2.27',
+        materialUISupport: '1.1.0',
+        coroutines       : '1.3.5',
+        maps             : '17.0.0',
+        junit            : '4.12',
+        androidxTestExt  : '1.1.1',
+        espresso         : '3.1.0',
+        mockito          : '2.25.1',
+        kotlinMockito    : '1.6.0',
+        assertj          : '3.11.1'
+]
+
+ext.libraries = [
+        kotlinStd            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        ktx                  : "androidx.core:core-ktx:$versions.ktx",
+        androidAppCompat     : "androidx.appcompat:appcompat:$versions.appcompat",
+        constraintlayout     : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+        androidSupportDesign : "com.google.android.material:material:$versions.materialUISupport",
+        retrofit             : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        dagger               : "com.google.dagger:dagger:$versions.dagger",
+        coroutines           : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+        maps                 : "com.google.android.gms:play-services-maps:$versions.maps"
+]
+
+ext.unitTestLibraries = [
+        junit        : "junit:junit:$versions.junit"
+]
+
+ext.instrumentationTestLibraries = [
+        androidxTestExt    : "androidx.test.ext:junit:$versions.androidxTestExt",
+        espressoCore       : ["androidx.test.espresso:espresso-core:$versions.espresso", {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        }]
+]
+
+ext.compilers = [
+        dagger: "com.google.dagger:dagger-compiler:$versions.dagger",
+]
