@@ -1,11 +1,26 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Custom.BottomSheetDialog</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style
+        name="ThemeOverlay.Custom.BottomSheetDialog"
+        parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Custom.BottomSheet</item>
+    </style>
+    
+    <style name="Widget.Custom.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Custom</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Custom" parent="">
+        <item name="cornerSize">4dp</item>
+        <item name="cornerFamily">rounded</item>
     </style>
 
 </resources>

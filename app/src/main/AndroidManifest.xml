@@ -3,6 +3,7 @@
     package="com.alpha.trafficconditionmap">
 
     <application
+        android:name=".TrafficConditionsMapApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,9 +13,9 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCObLwgvhSg8FqGB-usrBLA9i4XpjA-RHg"/>
+            android:value="AIzaSyCObLwgvhSg8FqGB-usrBLA9i4XpjA-RHg" />
 
-        <activity android:name=".TrafficConditionsMapActivity">
+        <activity android:name=".home.TrafficConditionsHomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
