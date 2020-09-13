@@ -28,6 +28,9 @@ android {
         sourceCompatibility = appConfig.javaVersion
     }
 
+    viewBinding {
+        enabled = appConfig.viewBindingnabled
+    }
 }
 
 dependencies {
@@ -38,16 +41,26 @@ dependencies {
     implementation libraries.androidAppCompat
     implementation libraries.constraintlayout
     implementation libraries.androidSupportDesign
-
     implementation libraries.retrofit
     implementation libraries.retrofitGsonConverter
-
+    implementation libraries.okhttpLoggingInterceptor
     implementation libraries.dagger
-
     implementation libraries.coroutines
     implementation libraries.maps
+    implementation libraries.androidMapsUils
+    implementation libraries.picasso
+    implementation libraries.lifecycleExtensions
+    implementation libraries.lifecycleViewmodel
+    implementation libraries.livedataKtx
+    implementation libraries.lifecycleViewmodelKtx
 
     testImplementation unitTestLibraries.junit
+    testImplementation unitTestLibraries.mockito
+    testImplementation unitTestLibraries.assertj
+    testImplementation unitTestLibraries.kotlinMockito
+    testImplementation unitTestLibraries.kotlinxCoroutinesTest
+    testImplementation unitTestLibraries.archCoreTesting
+
     testImplementation instrumentationTestLibraries.androidxTestExt
     testImplementation instrumentationTestLibraries.espressoCore
 

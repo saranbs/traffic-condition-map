@@ -1,42 +1,63 @@
 ext.versions = [
-        kotlin           : '1.3.61',
-        ktx              : '1.3.1',
-        appcompat        : '1.2.0',
-        constraintlayout : '2.0.1',
-        retrofit         : '2.8.1',
-        okhttp           : '3.14.4',
-        dagger           : '2.27',
-        materialUISupport: '1.1.0',
-        coroutines       : '1.3.5',
-        maps             : '17.0.0',
-        junit            : '4.12',
-        androidxTestExt  : '1.1.1',
-        espresso         : '3.1.0',
-        mockito          : '2.25.1',
-        kotlinMockito    : '1.6.0',
-        assertj          : '3.11.1'
+        kotlin               : '1.3.61',
+        ktx                  : '1.3.1',
+        appcompat            : '1.2.0',
+        constraintlayout     : '2.0.1',
+        retrofit             : '2.8.1',
+        okhttp               : '3.14.4',
+        dagger               : '2.27',
+        materialUISupport    : '1.1.0',
+        coroutines           : '1.3.5',
+        maps                 : '17.0.0',
+        junit                : '4.12',
+        androidxTestExt      : '1.1.1',
+        espresso             : '3.1.0',
+        mockito              : '2.25.1',
+        kotlinMockito        : '1.6.0',
+        assertj              : '3.11.1',
+        lifecycle            : '2.1.0',
+        livedata             : '2.2.0-rc02',
+        lifecycleViewmodelKtx: '2.1.0-beta01',
+        picasso              : '2.71828',
+        androidMapsUils      : '1.1.0',
+        kotlinxCoroutinesTest: '1.3.9',
+        archCoreTesting      : '2.1.0'
 ]
 
 ext.libraries = [
-        kotlinStd            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
-        ktx                  : "androidx.core:core-ktx:$versions.ktx",
-        androidAppCompat     : "androidx.appcompat:appcompat:$versions.appcompat",
-        constraintlayout     : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
-        androidSupportDesign : "com.google.android.material:material:$versions.materialUISupport",
-        retrofit             : "com.squareup.retrofit2:retrofit:$versions.retrofit",
-        retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:$versions.retrofit",
-        dagger               : "com.google.dagger:dagger:$versions.dagger",
-        coroutines           : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
-        maps                 : "com.google.android.gms:play-services-maps:$versions.maps"
+        kotlinStd               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        ktx                     : "androidx.core:core-ktx:$versions.ktx",
+        androidAppCompat        : "androidx.appcompat:appcompat:$versions.appcompat",
+        constraintlayout        : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+        androidSupportDesign    : "com.google.android.material:material:$versions.materialUISupport",
+        retrofit                : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        okhttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+        dagger                  : "com.google.dagger:dagger:$versions.dagger",
+        coroutines              : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+        maps                    : "com.google.android.gms:play-services-maps:$versions.maps",
+        androidMapsUils         : "com.google.maps.android:android-maps-utils:$versions.androidMapsUils",
+        lifecycleExtensions     : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+        lifecycleViewmodel      : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+        livedataKtx             : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.livedata",
+        lifecycleViewmodelKtx   : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleViewmodelKtx",
+        picasso                 : "com.squareup.picasso:picasso:$versions.picasso"
 ]
 
 ext.unitTestLibraries = [
-        junit        : "junit:junit:$versions.junit"
+        junit                : "junit:junit:$versions.junit",
+        mockito              : "org.mockito:mockito-inline:$versions.mockito",
+        assertj              : "org.assertj:assertj-core:$versions.assertj",
+        kotlinMockito        : ["com.nhaarman:mockito-kotlin:$versions.kotlinMockito", {
+            exclude module: 'kotlin-reflect'
+        }],
+        kotlinxCoroutinesTest: "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.kotlinxCoroutinesTest",
+        archCoreTesting      : "androidx.arch.core:core-testing:$versions.archCoreTesting"
 ]
 
 ext.instrumentationTestLibraries = [
-        androidxTestExt    : "androidx.test.ext:junit:$versions.androidxTestExt",
-        espressoCore       : ["androidx.test.espresso:espresso-core:$versions.espresso", {
+        androidxTestExt: "androidx.test.ext:junit:$versions.androidxTestExt",
+        espressoCore   : ["androidx.test.espresso:espresso-core:$versions.espresso", {
             exclude group: 'com.android.support', module: 'support-annotations'
         }]
 ]
